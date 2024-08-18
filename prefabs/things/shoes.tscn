@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://clq441w0lhv67"]
+
+[ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_sxwpn"]
+[ext_resource type="Texture2D" uid="uid://qr6r1egfhgws" path="res://sprites/items/SHOES.png" id="2_0ax4v"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jh0e0"]
+radius = 3.92249
+height = 25.5864
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_anlkv"]
+height = 12.4447
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ckbjs"]
+height = 14.5992
+
+[node name="Shoes" instance=ExtResource("1_sxwpn")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(0.979406, 0.201899, -8.82526e-09, 0, -4.37114e-08, -1, -0.201899, 0.979406, -4.28112e-08, 0, -2.21073, 0)
+shape = SubResource("CapsuleShape3D_jh0e0")
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_0ax4v")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(0.995588, 0.0938303, -4.10145e-09, 0, -4.37114e-08, -1, -0.0938303, 0.995588, -4.35185e-08, -5.00459, 0.363729, 4.92332)
+shape = SubResource("CylinderShape3D_anlkv")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(0.945927, -0.32438, 1.41791e-08, 0, -4.37114e-08, -1, 0.32438, 0.945927, -4.13478e-08, -6.36966, 0.348574, 3.6418)
+shape = SubResource("CylinderShape3D_ckbjs")

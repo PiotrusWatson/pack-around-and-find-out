@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://3s33g6vxqmsg"]
+[gd_scene load_steps=4 format=3 uid="uid://3s33g6vxqmsg"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_fukdp"]
 [ext_resource type="Texture2D" uid="uid://brqehhuvsh0my" path="res://sprites/items/FRAME.png" id="2_ni1gv"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5hqbm"]
+size = Vector3(43.1443, 2.29443, 23.844)
+
 [node name="Frame" instance=ExtResource("1_fukdp")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.953735, -0.647217, -1.05409)
+shape = SubResource("BoxShape3D_5hqbm")
 
 [node name="Sprite3D" parent="." index="1"]
 texture = ExtResource("2_ni1gv")
