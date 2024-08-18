@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cliewg3mv57s7"]
+
+[ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_x4rb1"]
+[ext_resource type="Texture2D" uid="uid://5qs7im54jxrt" path="res://sprites/items/CAMERA.png" id="2_avfed"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3k1o4"]
+size = Vector3(39.7982, 6.43677, 22.5113)
+
+[node name="Camera" instance=ExtResource("1_x4rb1")]
+weight = 0.5
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.321228, -2.71838, 0.641891)
+shape = SubResource("BoxShape3D_3k1o4")
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_avfed")

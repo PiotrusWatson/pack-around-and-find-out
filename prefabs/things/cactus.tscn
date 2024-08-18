@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1kc72xgsmuqc"]
+
+[ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_6v2rh"]
+[ext_resource type="Texture2D" uid="uid://cflg1b2h2mj1x" path="res://sprites/items/CACTUS.png" id="2_qplks"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ooemv"]
+height = 10.7095
+radius = 4.22553
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_auwic"]
+radius = 2.01818
+height = 6.31776
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cq6we"]
+radius = 2.38232
+height = 16.3041
+
+[node name="Cactus" instance=ExtResource("1_6v2rh")]
+weight = 4.0
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.171188, -0.23862, 7.66215)
+shape = SubResource("CylinderShape3D_ooemv")
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_qplks")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.2751, -0.00664902, 0.106481)
+shape = SubResource("CapsuleShape3D_auwic")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.78606, 0, -5.76477)
+shape = SubResource("CapsuleShape3D_cq6we")

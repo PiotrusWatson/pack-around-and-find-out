@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyadrvg5eu4v0"]
+
+[ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_rslpg"]
+[ext_resource type="Texture2D" uid="uid://c3kuouevpheec" path="res://sprites/items/FISHBOWL.png" id="2_xsudc"]
+[ext_resource type="Texture2D" uid="uid://qa0rmgefkqos" path="res://sprites/items/DED_FISH.png" id="3_tlli5"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_44rrk"]
+radius = 12.6644
+
+[node name="Fishbowl" instance=ExtResource("1_rslpg")]
+weight = 5.0
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.2333, 0)
+shape = SubResource("SphereShape3D_44rrk")
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_xsudc")
+
+[node name="FishSpritew" type="Sprite3D" parent="Sprite3D" index="0"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.57213, -9.66553, -2.77145)
+render_priority = 30
+texture = ExtResource("3_tlli5")

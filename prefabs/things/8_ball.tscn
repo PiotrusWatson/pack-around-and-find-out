@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsvudaf8sof5k"]
+
+[ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_n5qgb"]
+
+[node name="8Ball" instance=ExtResource("1_n5qgb")]
+weight = 3.0

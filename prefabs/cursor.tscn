@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxxuhikvo4i2d"]
+
+[ext_resource type="Script" path="res://prefabs/cursor.gd" id="1_rllw5"]
+[ext_resource type="Script" path="res://components/mover.gd" id="2_kf4jg"]
+[ext_resource type="Texture2D" uid="uid://cjx35aer02h6v" path="res://sprites/cursor/HAND_OPEN.png" id="3_ll2da"]
+[ext_resource type="Script" path="res://components/hand_animator.gd" id="4_r00bt"]
+[ext_resource type="Texture2D" uid="uid://d0kasc6hb56y2" path="res://sprites/cursor/HAND_CLOSED.png" id="5_ct2pm"]
+[ext_resource type="PackedScene" uid="uid://ormrd2kd2rcg" path="res://components/pickup_handler.tscn" id="6_8fujv"]
+
+[node name="Cursor" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48.091, 0)
+script = ExtResource("1_rllw5")
+
+[node name="Components" type="Node" parent="."]
+
+[node name="Mover" type="Node" parent="Components"]
+script = ExtResource("2_kf4jg")
+
+[node name="HandAnimator" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+render_priority = 20
+texture = ExtResource("3_ll2da")
+script = ExtResource("4_r00bt")
+open = ExtResource("3_ll2da")
+closed = ExtResource("5_ct2pm")
+
+[node name="PickupHandler" parent="." instance=ExtResource("6_8fujv")]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ormrd2kd2rcg"]
+
+[ext_resource type="Script" path="res://components/pickuphandler.gd" id="1_wwh4h"]
+[ext_resource type="Script" path="res://components/thing_box.gd" id="2_gp8ee"]
+
+[node name="PickupHandler" type="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.17952, 0, -16.7125)
+script = ExtResource("1_wwh4h")
+
+[node name="Laser" type="RayCast3D" parent="."]
+target_position = Vector3(0, -100, 0)
+
+[node name="ThingBox" type="Node3D" parent="."]
+script = ExtResource("2_gp8ee")

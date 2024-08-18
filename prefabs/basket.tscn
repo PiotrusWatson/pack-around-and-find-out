@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c08e8dpk3jpvo"]
+
+[ext_resource type="Script" path="res://prefabs/basket.gd" id="1_5uc2v"]
+[ext_resource type="Texture2D" uid="uid://gyi4vnb2gycr" path="res://sprites/placeholder/Sam_Lake-MichaelFörtsch.jpg" id="2_uojp1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tawhv"]
+size = Vector3(63.8059, 0.16481, 122.178)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_37mxm"]
+size = Vector3(63.2544, 5.30457, 94.276)
+
+[node name="Basket" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0832968, 0)
+script = ExtResource("1_5uc2v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.328979, 0.67701, 0)
+shape = SubResource("BoxShape3D_tawhv")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(8, 0, 0, 0, -3.49691e-07, 8, 0, -8, -3.49691e-07, 0, 0, 0)
+texture = ExtResource("2_uojp1")
+
+[node name="ThingDetector" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ThingDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341553, 2.15228, -0.0582085)
+shape = SubResource("BoxShape3D_37mxm")
+
+[connection signal="body_entered" from="ThingDetector" to="." method="_on_thing_detector_body_entered"]
+[connection signal="body_exited" from="ThingDetector" to="." method="_on_thing_detector_body_exited"]
