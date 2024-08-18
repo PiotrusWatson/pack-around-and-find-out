@@ -15,3 +15,6 @@ func move_to_position_3D(position: Vector3):
 	
 func move_to_position_2D(position: Vector2):
 	parent.position = Vector3(position.x, parent.position.y, position.y)	
+	
+func push_to_position_2D(position: Vector2):
+	parent.position += Vector3(position.x, 0, position.y)

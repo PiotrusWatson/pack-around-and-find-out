@@ -108,6 +108,5 @@ texture = ExtResource("1_neyvk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341553, 2.15228, -0.0582085)
 shape = SubResource("BoxShape3D_37mxm")
 
-[connection signal="body_entered" from="Thing" to="Thing" method="_on_body_entered"]
 [connection signal="body_entered" from="Basket/ThingDetector" to="Basket" method="_on_thing_detector_body_entered"]
 [connection signal="body_exited" from="Basket/ThingDetector" to="Basket" method="_on_thing_detector_body_exited"]
