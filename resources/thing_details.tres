@@ -2,9 +2,10 @@
 
 [sub_resource type="GDScript" id="GDScript_mptu4"]
 script/source = "extends Resource
-
-@export var kilos: float"
+enum Material{BOWL, FRUIT, PAPER, DIRT, TUNGSTEN, PLASTIC, CAST_IRON}
+@export var kilos: float
+@export var material: "
 
 [resource]
 script = SubResource("GDScript_mptu4")
-kilos = 0.0
+kilos = null
