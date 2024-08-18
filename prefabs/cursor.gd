@@ -3,13 +3,17 @@ extends Node3D
 @onready var mover = $Components/Mover
 @onready var pickup_handler = $PickupHandler
 @onready var hand_animator = $HandAnimator
-var main_camera
+var main_camera: Camera3D
+var cursor_2D_pos = Vector2.ZERO
+const RAY_LENGTH = 1000
 
-const LEFT_CLICK = 0
+const LEFT_CLICK = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	mover.init(self)
 	main_camera = get_viewport().get_camera_3d()
+	toggle_mouse_visibility(false)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,18 +21,26 @@ func _process(delta):
 	pass
 
 func is_left_click(event):
-	return event is InputEventMouseButton #and event.button_index == LEFT_CLICK
+	return event is InputEventMouseButton and event.button_index == LEFT_CLICK
 	
 func _input(event):
 	if event is InputEventMouseMotion:
-		var mouse_position = main_camera.project_position(get_viewport().get_mouse_position(), main_camera.global_transform.origin.y)
-		var mouse_position_2D = Vector2(mouse_position.x, mouse_position.z)
-		mover.move_to_position_2D(mouse_position_2D)
-		
+		mover.push_to_position_2D(event.relative)
+		cursor_2D_pos += event.relative
 	if is_left_click(event) and event.pressed:
+		var new_end_point = (pickup_handler.global_position - main_camera.global_position) * main_camera.global_position.y
+		pickup_handler.set_end(new_end_point)
 		hand_animator.grab()
 		pickup_handler.grab()
 	elif is_left_click(event) and !event.pressed:
 		hand_animator.release()
 		pickup_handler.release()
+	
+func toggle_mouse_visibility(is_visible):
+	if is_visible:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		
+		
 	

@@ -44,5 +44,6 @@ func release():
 	thing_box.release(thing)
 	return true
 	
-		
+func set_end(point):
+	laser.target_position = to_local(point)
 	
