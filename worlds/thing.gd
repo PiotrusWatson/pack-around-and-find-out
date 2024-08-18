@@ -12,3 +12,7 @@ func _process(delta):
 
 func make_grabbable(is_grabbable):
 	liftable.make_grabbable(is_grabbable)
+
+
+func _on_body_entered(body):
+	print(body.name)
