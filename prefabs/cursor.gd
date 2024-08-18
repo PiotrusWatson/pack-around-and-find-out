@@ -28,8 +28,8 @@ func _input(event):
 		mover.push_to_position_2D(event.relative)
 		cursor_2D_pos += event.relative
 	if is_left_click(event) and event.pressed:
-		#var new_end_point = get_good_laser_position()
-		#pickup_handler.set_end(new_end_point)
+		var new_end_point = (pickup_handler.global_position - main_camera.global_position) * 3
+		pickup_handler.set_end(new_end_point)
 		hand_animator.grab()
 		pickup_handler.grab()
 	elif is_left_click(event) and !event.pressed:
@@ -43,13 +43,4 @@ func toggle_mouse_visibility(is_visible):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		
 		
-func get_good_laser_position():
-	var from = main_camera.project_ray_origin(cursor_2D_pos)
-	var to = Vector3(pickup_handler.global_position.x, -100, pickup_handler.global_position.z)
-	var space = get_world_3d().direct_space_state
-	var query = PhysicsRayQueryParameters3D.create(from, to)
-	var result = space.intersect_ray(query)
-	var pos = result["position"]
-	print("My position", pickup_handler.global_position, "shot position", pos)
-	return Vector3(pos.x, -100, pos.z)
 	
