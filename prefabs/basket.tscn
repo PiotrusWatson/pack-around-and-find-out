@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://gyi4vnb2gycr" path="res://sprites/placeholder/Sam_Lake-MichaelFörtsch.jpg" id="2_uojp1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w85yf"]
-friction = 0.5
+friction = 0.18
 bounce = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tawhv"]
@@ -30,6 +30,7 @@ shape = SubResource("BoxShape3D_tawhv")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, -3.49691e-07, 8, 0, -8, -3.49691e-07, 0, 0, 0)
+render_priority = 1
 texture = ExtResource("2_uojp1")
 
 [node name="ThingDetector" type="Area3D" parent="."]
