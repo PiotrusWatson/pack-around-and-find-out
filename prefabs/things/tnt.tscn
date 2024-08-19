@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://wjfbdaci3py6"]
+[gd_scene load_steps=5 format=3 uid="uid://wjfbdaci3py6"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_ur3kw"]
+[ext_resource type="Resource" uid="uid://dxglqjb1m8k41" path="res://resources/things/tnt.tres" id="2_sacpo"]
 [ext_resource type="Texture2D" uid="uid://dcrkukgeywrdx" path="res://sprites/items/TNT.png" id="2_wxg6i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_eotmp"]
@@ -8,6 +9,7 @@ radius = 4.27259
 height = 28.2289
 
 [node name="TNT" instance=ExtResource("1_ur3kw")]
+weight_data = ExtResource("2_sacpo")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -3.58917, 0)

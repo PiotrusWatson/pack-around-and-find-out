@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnhb2mu1wonno"]
+[gd_scene load_steps=6 format=3 uid="uid://dnhb2mu1wonno"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_o5ca3"]
+[ext_resource type="Resource" uid="uid://7pmkl0yejpx8" path="res://resources/things/morning_star.tres" id="2_8eri6"]
 [ext_resource type="Texture2D" uid="uid://4g3elb63670" path="res://sprites/items/MORNINGSTAR.png" id="2_bebxk"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2dawg"]
@@ -10,6 +11,7 @@ height = 40.3427
 radius = 5.17723
 
 [node name="MorningStar" instance=ExtResource("1_o5ca3")]
+weight_data = ExtResource("2_8eri6")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(0.384295, 0.92321, 3.87725e-08, 3.35339e-08, 2.80386e-08, -1, -0.92321, 0.384295, -2.01837e-08, 3.5841, 0.441431, 3.03122)

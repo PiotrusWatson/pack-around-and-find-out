@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6rrf8ug1hadl"]
+[gd_scene load_steps=5 format=3 uid="uid://b6rrf8ug1hadl"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_aihv7"]
 [ext_resource type="Texture2D" uid="uid://bjxwgftn7yysc" path="res://sprites/items/GreenSky.png" id="2_k7etc"]
+[ext_resource type="Resource" uid="uid://bvs57l0s8b1c1" path="res://resources/things/vase.tres" id="2_vn1lc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tgrar"]
 radius = 6.94411
 height = 37.2242
 
 [node name="Vase" instance=ExtResource("1_aihv7")]
+weight_data = ExtResource("2_vn1lc")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -6, 0)

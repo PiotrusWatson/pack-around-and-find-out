@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 @onready var liftable = $Liftable
-@export var weight: float
+@export var weight_data: WeightData
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	liftable.init(self)

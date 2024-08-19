@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1kc72xgsmuqc"]
+[gd_scene load_steps=7 format=3 uid="uid://d1kc72xgsmuqc"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_6v2rh"]
+[ext_resource type="Resource" uid="uid://b0qw5wjan71hq" path="res://resources/things/cactus.tres" id="2_27xfm"]
 [ext_resource type="Texture2D" uid="uid://cflg1b2h2mj1x" path="res://sprites/items/CACTUS.png" id="2_qplks"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ooemv"]
@@ -16,7 +17,7 @@ radius = 2.38232
 height = 16.3041
 
 [node name="Cactus" instance=ExtResource("1_6v2rh")]
-weight = 4.0
+weight_data = ExtResource("2_27xfm")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.171188, -0.23862, 7.66215)

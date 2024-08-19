@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://clq441w0lhv67"]
+[gd_scene load_steps=7 format=3 uid="uid://clq441w0lhv67"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_sxwpn"]
 [ext_resource type="Texture2D" uid="uid://qr6r1egfhgws" path="res://sprites/items/SHOES.png" id="2_0ax4v"]
+[ext_resource type="Resource" uid="uid://cvi4dblhhqa5w" path="res://resources/things/shoes.tres" id="2_xnseh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jh0e0"]
 radius = 3.92249
@@ -14,6 +15,7 @@ height = 12.4447
 height = 14.5992
 
 [node name="Shoes" instance=ExtResource("1_sxwpn")]
+weight_data = ExtResource("2_xnseh")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(0.979406, 0.201899, -8.82526e-09, 0, -4.37114e-08, -1, -0.201899, 0.979406, -4.28112e-08, 0, -2.21073, 0)

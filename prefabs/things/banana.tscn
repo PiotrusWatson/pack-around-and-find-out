@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://u6nf3aku5nwh"]
+[gd_scene load_steps=5 format=3 uid="uid://u6nf3aku5nwh"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_wj763"]
 [ext_resource type="Texture2D" uid="uid://bclfqjywf88fr" path="res://sprites/items/BANANA.png" id="2_lxdng"]
+[ext_resource type="Resource" uid="uid://chdb6x6poflni" path="res://resources/things/banana.tres" id="2_o3wm7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u25vw"]
 radius = 2.6339
 height = 17.6318
 
 [node name="Banana" instance=ExtResource("1_wj763")]
-weight = 0.2
+weight_data = ExtResource("2_o3wm7")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(0.939382, -0.342434, 0.0173469, 0, -0.0505929, -0.998719, 0.342873, 0.938179, -0.0475261, -0.973923, 0, -4.7525)

@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqwcjyqji0d57"]
+[gd_scene load_steps=5 format=3 uid="uid://cqwcjyqji0d57"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_asoyr"]
+[ext_resource type="Resource" uid="uid://575pb3u3hnde" path="res://resources/things/cube.tres" id="2_5jkb3"]
 [ext_resource type="Texture2D" uid="uid://q3ack1ilbv4i" path="res://sprites/items/CUBE.png" id="2_8gcv2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_squsd"]
 size = Vector3(24.317, 24, 19.21)
 
 [node name="TungstenCube" instance=ExtResource("1_asoyr")]
-weight = 2.0
+weight_data = ExtResource("2_5jkb3")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.998199, -11.7911, 2.34717)

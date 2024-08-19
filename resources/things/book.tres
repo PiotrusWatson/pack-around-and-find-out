@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://pbs2bl3qp8rn"]
+
+[ext_resource type="Script" path="res://resources/thing_details.gd" id="1_kgmtc"]
+
+[resource]
+script = ExtResource("1_kgmtc")
+kilos = 0.6
+material = 2

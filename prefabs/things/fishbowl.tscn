@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyadrvg5eu4v0"]
+[gd_scene load_steps=6 format=3 uid="uid://dyadrvg5eu4v0"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_rslpg"]
+[ext_resource type="Resource" uid="uid://2bvjp5jgin4s" path="res://resources/things/bowl.tres" id="2_7jjov"]
 [ext_resource type="Texture2D" uid="uid://c3kuouevpheec" path="res://sprites/items/FISHBOWL.png" id="2_xsudc"]
 [ext_resource type="Texture2D" uid="uid://qa0rmgefkqos" path="res://sprites/items/DED_FISH.png" id="3_tlli5"]
 
@@ -8,7 +9,7 @@
 radius = 12.6644
 
 [node name="Fishbowl" instance=ExtResource("1_rslpg")]
-weight = 5.0
+weight_data = ExtResource("2_7jjov")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.2333, 0)

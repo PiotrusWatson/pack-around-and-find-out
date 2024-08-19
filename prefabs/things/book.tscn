@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnlk7dfwfr747"]
+[gd_scene load_steps=5 format=3 uid="uid://dnlk7dfwfr747"]
 
 [ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_q8fc3"]
+[ext_resource type="Resource" uid="uid://pbs2bl3qp8rn" path="res://resources/things/book.tres" id="2_78qip"]
 [ext_resource type="Texture2D" uid="uid://bdr57bl3rj01y" path="res://sprites/items/BOOK.png" id="2_jaumk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m7jwb"]
 size = Vector3(19.457, 3.48694, 24.5698)
 
 [node name="Book" instance=ExtResource("1_q8fc3")]
-weight = 2.0
+weight_data = ExtResource("2_78qip")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08214, -1.24347, -0.046875)
