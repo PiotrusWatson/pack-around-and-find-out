@@ -1,7 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c08e8dpk3jpvo"]
+[gd_scene load_steps=8 format=3 uid="uid://c08e8dpk3jpvo"]
 
 [ext_resource type="Script" path="res://prefabs/basket.gd" id="1_5uc2v"]
 [ext_resource type="Texture2D" uid="uid://gyi4vnb2gycr" path="res://sprites/placeholder/Sam_Lake-MichaelFörtsch.jpg" id="2_uojp1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w85yf"]
+friction = 0.5
+bounce = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tawhv"]
 size = Vector3(63.8059, 0.16481, 122.178)
@@ -9,11 +13,18 @@ size = Vector3(63.8059, 0.16481, 122.178)
 [sub_resource type="BoxShape3D" id="BoxShape3D_37mxm"]
 size = Vector3(63.2544, 5.30457, 94.276)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_b62hd"]
+size = Vector3(1, 4.73743, 93.3176)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ji8dj"]
+size = Vector3(65.9348, 4.90002, 1)
+
 [node name="Basket" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0832968, 0)
+physics_material_override = SubResource("PhysicsMaterial_w85yf")
 script = ExtResource("1_5uc2v")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Floor" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.328979, 0.67701, 0)
 shape = SubResource("BoxShape3D_tawhv")
 
@@ -26,6 +37,22 @@ texture = ExtResource("2_uojp1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ThingDetector"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.341553, 2.15228, -0.0582085)
 shape = SubResource("BoxShape3D_37mxm")
+
+[node name="LeftWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5858, 2.52405, 0.571943)
+shape = SubResource("BoxShape3D_b62hd")
+
+[node name="RightWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.451, 2.52405, 0.699377)
+shape = SubResource("BoxShape3D_b62hd")
+
+[node name="FrontWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0288773, 2.59911, 47.7513)
+shape = SubResource("BoxShape3D_ji8dj")
+
+[node name="BackWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0288773, 2.59911, -46.4082)
+shape = SubResource("BoxShape3D_ji8dj")
 
 [connection signal="body_entered" from="ThingDetector" to="." method="_on_thing_detector_body_entered"]
 [connection signal="body_exited" from="ThingDetector" to="." method="_on_thing_detector_body_exited"]
