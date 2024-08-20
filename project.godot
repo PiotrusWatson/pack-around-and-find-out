@@ -15,7 +15,15 @@ run/main_scene="res://worlds/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://sprites/placeholder/icon.svg"
 
+[autoload]
+
+RigidBodyAutoScaler="*res://addons/rigidbody_auto_scaler/RigidBodyAutoScaler.gd"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/rigidbody_auto_scaler/plugin.cfg")
