@@ -7,10 +7,10 @@ signal current_weight_changed(weight)
 var max_weight
 var current_weight = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
+func init():
 	max_weight = generate_max_weight()
 	generated_max_weight.emit(max_weight)
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcmrxjfk3auix"]
+[gd_scene load_steps=5 format=3 uid="uid://bcmrxjfk3auix"]
 
 [ext_resource type="Texture2D" uid="uid://d0qa6wcj3o8rh" path="res://sprites/BACK.png" id="1_jirn7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtevo"]
 size = Vector3(3219.47, 0.001, 2085.28)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_10y41"]
+size = Vector3(963.764, 426.871, 34.0042)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq8oj"]
+size = Vector3(30, 489.598, 676.719)
 
 [node name="Floor" type="StaticBody3D"]
 
@@ -14,3 +20,19 @@ shape = SubResource("BoxShape3D_vtevo")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(30, 0, 0, 0, -1.31134e-06, 30, 0, -30, -1.31134e-06, 0, 0, 0)
 texture = ExtResource("1_jirn7")
+
+[node name="BackWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.504, 213.034, -321.657)
+shape = SubResource("BoxShape3D_10y41")
+
+[node name="FrontWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1766, 213.034, 326.52)
+shape = SubResource("BoxShape3D_10y41")
+
+[node name="LeftWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.673, 192.8, 6.04895)
+shape = SubResource("BoxShape3D_pq8oj")
+
+[node name="RightWall" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 436.726, 192.8, 6.04895)
+shape = SubResource("BoxShape3D_pq8oj")

@@ -9,3 +9,4 @@ func _ready():
 	basket.thing_added.connect(ui.display_number_of_items)
 	basket.thing_removed.connect(ui.display_number_of_items)
 	god.generated_max_weight.connect(ui.display_max_kilos)
+	god.init()

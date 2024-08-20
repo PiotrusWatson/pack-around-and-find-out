@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://yh6803te8yol"]
+[gd_scene load_steps=23 format=3 uid="uid://yh6803te8yol"]
 
 [ext_resource type="Script" path="res://worlds/signals.gd" id="1_tph61"]
 [ext_resource type="PackedScene" uid="uid://bcmrxjfk3auix" path="res://prefabs/floor.tscn" id="2_4hm4b"]
@@ -20,6 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://wjfbdaci3py6" path="res://prefabs/things/tnt.tscn" id="18_1xvi5"]
 [ext_resource type="PackedScene" uid="uid://cqwcjyqji0d57" path="res://prefabs/things/tungsten_cube.tscn" id="19_7f8ut"]
 [ext_resource type="PackedScene" uid="uid://b6rrf8ug1hadl" path="res://prefabs/things/vase.tscn" id="20_b6ctr"]
+[ext_resource type="Texture2D" uid="uid://dq5e6lgdg7bfc" path="res://sprites/placeholder/cat.jpg" id="21_kb0bw"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rpnwv"]
+friction = 0.51
+bounce = 0.02
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_tph61")
@@ -74,51 +79,56 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -196.455, 0.0832968, -72.2466
 
 [node name="8Ball" parent="." instance=ExtResource("8_8paxx")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 136.513, 100, 0)
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Banana" parent="." instance=ExtResource("9_axu16")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.9344, 100, 0)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Book" parent="." instance=ExtResource("10_2nnug")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 104.019, 100, 76.491)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Cactus" parent="." instance=ExtResource("11_itvvx")]
 transform = Transform3D(9, 0, 0, 0, 9, 0, 0, 0, 9, 283.799, 100, 0)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Camera" parent="." instance=ExtResource("12_eksjt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 301.269, 100, -167.757)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Duck" parent="." instance=ExtResource("13_6sfge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 236.047, 100, 0)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Fishbowl" parent="." instance=ExtResource("14_0dyyb")]
 transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 173.93, 176.607, -139.8)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Frame" parent="." instance=ExtResource("15_68pjv")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 258.421, 100, 0)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="MorningStar" parent="." instance=ExtResource("16_pqs6s")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 209.43, 100, 0)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Shoes" parent="." instance=ExtResource("17_m8cxn")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 282.731, 100, -90.4358)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="TNT" parent="." instance=ExtResource("18_1xvi5")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 185.869, 100, 42.3714)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="TungstenCube" parent="." instance=ExtResource("19_7f8ut")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 289.078, 100, -217.806)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 
 [node name="Vase" parent="." instance=ExtResource("20_b6ctr")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 63.9251, 100, 0)
-lock_rotation = true
+physics_material_override = SubResource("PhysicsMaterial_rpnwv")
+
+[node name="FullBG" type="Sprite3D" parent="."]
+transform = Transform3D(40, 0, 0, 0, -1.74846e-06, -40, 0, 40, -1.74846e-06, 0, -18.5755, 0)
+texture = ExtResource("21_kb0bw")
