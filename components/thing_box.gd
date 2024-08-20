@@ -1,6 +1,8 @@
 extends Node3D
 
-
+func _process(delta):
+	if holding_something():
+		get_thing().global_position = global_position
 func holding_something():
 	return get_child_count() == 1
 

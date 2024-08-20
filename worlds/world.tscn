@@ -14,7 +14,7 @@
 script = ExtResource("1_tph61")
 
 [node name="Thing" parent="." instance=ExtResource("1_lqrtc")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 52.0563, 28.8045, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 173.833, 28.8045, 0)
 weight_data = ExtResource("3_ukot3")
 
 [node name="Camera3D" type="Camera3D" parent="."]

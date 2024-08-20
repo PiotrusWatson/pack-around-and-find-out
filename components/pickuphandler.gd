@@ -31,6 +31,7 @@ func grab():
 	print("GRAB")
 	thing.make_grabbable(true)
 	thing.global_position = global_position
+	print("thing is at ", thing.global_position)
 	thing.global_position.y -= offset_amount
 	thing_box.hold(thing)
 	return true
