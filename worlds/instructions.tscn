@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpudwryvmn68g"]
+
+[ext_resource type="Theme" uid="uid://be013ll8enjqx" path="res://ui_stuff/ui_text.tres" id="1_v5eun"]
+[ext_resource type="Script" path="res://worlds/instructions.gd" id="2_qlm3e"]
+[ext_resource type="FontFile" uid="uid://c8nsawbylxyae" path="res://ui_stuff/Spooky Grinch.otf" id="3_gaelk"]
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v5eun")
+script = ExtResource("2_qlm3e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.215686, 0.223529, 0.505882, 1)
+
+[node name="title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 32.0
+offset_right = 1275.0
+offset_bottom = 173.0
+theme_override_fonts/font = ExtResource("3_gaelk")
+theme_override_font_sizes/font_size = 100
+text = "Instructions!"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="title"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 125.0
+offset_right = 1190.0
+offset_bottom = 660.0
+theme_override_font_sizes/font_size = 50
+text = "You have only 45 seconds (ish) until you need to leave for your flight! You haven't packed yet!
+
+Click and Drag each item into the suitcase. Pack as many items as you can before time runs out - but be careful! If you go over the maximum weight you'll be jailed upon entering the airport :("
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 559.0
+offset_right = 710.0
+offset_bottom = 650.0
+text = "Back"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

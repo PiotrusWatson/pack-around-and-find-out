@@ -30,10 +30,10 @@ text = "You packed X items!"
 
 [node name="WithWeight" type="Label" parent="."]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 107.0
-offset_right = 717.0
-offset_bottom = 155.0
+offset_left = 176.0
+offset_top = 105.0
+offset_right = 715.0
+offset_bottom = 153.0
 theme_override_font_sizes/font_size = 50
 text = "With a total weight of Y"
 
@@ -51,9 +51,10 @@ layout_mode = 0
 offset_left = 171.0
 offset_top = 228.0
 offset_right = 1113.0
-offset_bottom = 276.0
+offset_bottom = 404.0
 theme_override_font_sizes/font_size = 50
 text = "Good job! Score: A"
+autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -63,4 +64,13 @@ offset_right = 444.0
 offset_bottom = 574.0
 text = "Play again?"
 
+[node name="MenuButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 444.0
+offset_right = 784.0
+offset_bottom = 570.0
+text = "Back to menu"
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="MenuButton" to="." method="_on_menu_button_button_down"]

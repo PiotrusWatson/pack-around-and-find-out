@@ -83,7 +83,7 @@ script = ExtResource("8_2yysi")
 max_weight_limit = Vector2(10, 60)
 
 [node name="GameTimer" type="Timer" parent="God"]
-wait_time = 10.0
+wait_time = 45.0
 one_shot = true
 autostart = true
 

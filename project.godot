@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PackAroundAndFindOut"
-run/main_scene="res://worlds/world.tscn"
+run/main_scene="res://worlds/title.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://sprites/placeholder/icon.svg"
 
@@ -24,6 +24,7 @@ Globals="*res://autoload/globals.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

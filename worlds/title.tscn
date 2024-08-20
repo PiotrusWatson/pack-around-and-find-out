@@ -86,3 +86,7 @@ offset_bottom = 637.0
 theme = ExtResource("2_eh6mi")
 text = "Credits
 "
+
+[connection signal="button_down" from="Start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Instructions" to="." method="_on_instructions_button_down"]
+[connection signal="button_down" from="Credits" to="." method="_on_credits_button_down"]

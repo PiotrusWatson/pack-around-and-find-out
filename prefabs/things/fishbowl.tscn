@@ -16,9 +16,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.2333, 0)
 shape = SubResource("SphereShape3D_44rrk")
 
 [node name="Sprite3D" parent="." index="1"]
+transform = Transform3D(2.8, 0, 0, 0, -1.22392e-07, 2.8, 0, -2.8, -1.22392e-07, 0, 1, 0)
 texture = ExtResource("2_xsudc")
 
 [node name="FishSpritew" type="Sprite3D" parent="Sprite3D" index="0"]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -1.57213, -9.66553, -2.77145)
+transform = Transform3D(0.397982, -1.75387e-09, 0.0401238, 1.75387e-09, 0.4, 8.8173e-11, -0.0401238, 8.8189e-11, 0.397982, -0.106594, -1.33939, -0.980909)
 render_priority = 30
 texture = ExtResource("3_tlli5")

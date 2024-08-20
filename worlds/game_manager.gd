@@ -16,6 +16,7 @@ var current_weight = 0
 func init():
 	max_weight = generate_max_weight()
 	generated_max_weight.emit(max_weight)
+	timer_ticked.emit(game_timer.time_left)
 
 
 

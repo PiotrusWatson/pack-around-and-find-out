@@ -20,4 +20,5 @@ transform = Transform3D(0.795357, 0.605365, -0.0306664, 0, -0.0505929, -0.998719
 shape = SubResource("CapsuleShape3D_u25vw")
 
 [node name="Sprite3D" parent="." index="2"]
+transform = Transform3D(2.8, 0, 0, 0, -1.22392e-07, 2.8, 0, -2.8, -1.22392e-07, 0, 1, 0)
 texture = ExtResource("2_lxdng")

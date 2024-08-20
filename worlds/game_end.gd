@@ -33,3 +33,7 @@ func _process(delta):
 
 func _on_button_button_down():
 	Globals.go_to_main()
+
+
+func _on_menu_button_button_down():
+	Globals.go_to_title()

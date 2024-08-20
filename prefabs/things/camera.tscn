@@ -15,4 +15,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.321228, -2.71838, 0.641891)
 shape = SubResource("BoxShape3D_3k1o4")
 
 [node name="Sprite3D" parent="." index="1"]
+transform = Transform3D(2.8, 0, 0, 0, -1.22392e-07, 2.8, 0, -2.8, -1.22392e-07, 0, 1, 0)
 texture = ExtResource("2_avfed")
