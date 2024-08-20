@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var max_kilos = $"Max Kilos"
 @onready var debug_kilo_amount = $DebugAmount
 @onready var number_of_items = $NumberOfItems
+@onready var time_limit = $TimeLimit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,3 +18,6 @@ func display_debug_kilos(kilos):
 
 func display_number_of_items(items):
 	number_of_items.text = "Items packed: " + str(items)
+	
+func display_time_limit(time_left):
+	time_limit.text = str(time_left)

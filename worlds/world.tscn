@@ -68,12 +68,21 @@ offset_bottom = 96.0
 theme = ExtResource("5_wloaj")
 text = "0 Items"
 
+[node name="TimeLimit" type="Label" parent="UI"]
+offset_left = 194.0
+offset_top = 4.0
+offset_right = 353.0
+offset_bottom = 99.0
+theme = ExtResource("5_wloaj")
+theme_override_font_sizes/font_size = 50
+text = "18"
+
 [node name="God" type="Node" parent="."]
 script = ExtResource("8_2yysi")
 max_weight_limit = Vector2(10, 60)
 
 [node name="GameTimer" type="Timer" parent="God"]
-wait_time = 10.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
@@ -140,3 +149,5 @@ physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 [node name="FullBG" type="Sprite3D" parent="."]
 transform = Transform3D(40, 0, 0, 0, -1.74846e-06, -40, 0, 40, -1.74846e-06, 0, -18.5755, 0)
 texture = ExtResource("21_kb0bw")
+
+[connection signal="timeout" from="God/GameTick" to="God" method="_on_game_tick_timeout"]

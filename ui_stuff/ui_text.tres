@@ -1,5 +1,8 @@
-[gd_resource type="Theme" format=3 uid="uid://be013ll8enjqx"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://be013ll8enjqx"]
+
+[ext_resource type="FontFile" uid="uid://bsnihw1mwgw0s" path="res://ui_stuff/Super Bubbly.ttf" id="1_lyjev"]
 
 [resource]
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 6
+Label/fonts/font = ExtResource("1_lyjev")

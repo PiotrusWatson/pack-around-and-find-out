@@ -25,7 +25,7 @@ func _on_thing_detector_body_entered(body):
 	var thing : Thing = body
 	things[body.name] = thing
 	thing_added.emit(things.size())
-	new_weight_added.emit(thing.get_weight())
+	new_weight_added.emit(thing.get_weight_from_size())
 
 func _on_thing_detector_body_exited(body):
 	if !body.is_in_group("things"):
@@ -33,4 +33,4 @@ func _on_thing_detector_body_exited(body):
 	var thing : Thing = body
 	things.erase(body.name)
 	thing_removed.emit(things.size())
-	new_weight_removed.emit(-1 * thing.get_weight())
+	new_weight_removed.emit(-1 * thing.get_weight_from_size())

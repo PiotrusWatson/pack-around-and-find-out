@@ -5,6 +5,10 @@ signal current_weight_changed(weight)
 
 signal timer_ticked(time_left)
 
+
+@onready var game_timer = $GameTimer
+@onready var game_tick = $GameTick
+
 @export var max_weight_limit: Vector2
 var max_weight
 var current_weight = 0
@@ -25,3 +29,10 @@ func generate_max_weight():
 func increment_current_weight(weight):
 	current_weight += weight
 	current_weight_changed.emit(current_weight)
+	
+func end_game():
+	pass
+
+
+func _on_game_tick_timeout():
+	timer_ticked.emit(int(game_timer.time_left))

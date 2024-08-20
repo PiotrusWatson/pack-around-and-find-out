@@ -12,4 +12,5 @@ func _ready():
 	basket.new_weight_removed.connect(god.increment_current_weight)
 	god.current_weight_changed.connect(ui.display_debug_kilos)
 	god.generated_max_weight.connect(ui.display_max_kilos)
+	god.timer_ticked.connect(ui.display_time_limit)
 	god.init()
