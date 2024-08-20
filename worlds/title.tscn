@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://nrdjau812kav"]
+
+[ext_resource type="Texture2D" uid="uid://cce1771dbugia" path="res://sprites/BAG.png" id="1_h4mua"]
+[ext_resource type="Script" path="res://worlds/title_screen.gd" id="1_h52l1"]
+[ext_resource type="Theme" uid="uid://be013ll8enjqx" path="res://ui_stuff/ui_text.tres" id="2_eh6mi"]
+[ext_resource type="FontFile" uid="uid://c8nsawbylxyae" path="res://ui_stuff/Spooky Grinch.otf" id="3_pgsfy"]
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h52l1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.215686, 0.223529, 0.505882, 1)
+
+[node name="Logo" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Logo"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 62.0
+offset_right = 866.0
+offset_bottom = 539.0
+texture = ExtResource("1_h4mua")
+expand_mode = 1
+
+[node name="pack" type="Label" parent="Logo"]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 35.0
+offset_right = 1119.0
+offset_bottom = 578.0
+theme = ExtResource("2_eh6mi")
+theme_override_fonts/font = ExtResource("3_pgsfy")
+theme_override_font_sizes/font_size = 300
+text = "PACK"
+
+[node name="around and find out" type="Label" parent="Logo"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 329.0
+offset_right = 819.0
+offset_bottom = 635.0
+theme = ExtResource("2_eh6mi")
+theme_override_font_sizes/font_size = 70
+text = "Around and Find Out"
+autowrap_mode = 2
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 562.0
+offset_right = 340.0
+offset_bottom = 643.0
+theme = ExtResource("2_eh6mi")
+text = "Start"
+
+[node name="Instructions" type="Button" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 562.0
+offset_right = 735.0
+offset_bottom = 646.0
+theme = ExtResource("2_eh6mi")
+text = "Instructions"
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 834.0
+offset_top = 555.0
+offset_right = 1031.0
+offset_bottom = 637.0
+theme = ExtResource("2_eh6mi")
+text = "Credits
+"

@@ -1,8 +1,17 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://be013ll8enjqx"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://be013ll8enjqx"]
 
 [ext_resource type="FontFile" uid="uid://bsnihw1mwgw0s" path="res://ui_stuff/Super Bubbly.ttf" id="1_lyjev"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dslg"]
+bg_color = Color(0.141176, 0.776471, 0, 1)
+border_color = Color(0.533333, 0.8, 0.662745, 1)
+
 [resource]
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 0.227451, 1, 1)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_lyjev")
+Button/styles/normal = SubResource("StyleBoxFlat_1dslg")
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/constants/outline_size = 6
 Label/fonts/font = ExtResource("1_lyjev")

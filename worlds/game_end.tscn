@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://c42g01qdjqfhw"]
+
+[ext_resource type="Theme" uid="uid://be013ll8enjqx" path="res://ui_stuff/ui_text.tres" id="1_uba5h"]
+[ext_resource type="Script" path="res://worlds/game_end.gd" id="2_cr2w5"]
+
+[node name="Game End" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uba5h")
+script = ExtResource("2_cr2w5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1277.0
+offset_bottom = 718.0
+color = Color(0.215686, 0.223529, 0.505882, 1)
+
+[node name="ItemPacker" type="Label" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 48.0
+offset_right = 1140.0
+offset_bottom = 290.0
+theme_override_font_sizes/font_size = 50
+text = "You packed X items!"
+
+[node name="WithWeight" type="Label" parent="."]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 107.0
+offset_right = 717.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 50
+text = "With a total weight of Y"
+
+[node name="OverUnder" type="Label" parent="."]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 164.0
+offset_right = 715.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 50
+text = "This was Over/Under the max weight of Z"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 228.0
+offset_right = 1113.0
+offset_bottom = 276.0
+theme_override_font_sizes/font_size = 50
+text = "Good job! Score: A"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 440.0
+offset_right = 444.0
+offset_bottom = 574.0
+text = "Play again?"
