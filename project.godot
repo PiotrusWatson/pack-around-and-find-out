@@ -18,6 +18,7 @@ config/icon="res://sprites/placeholder/icon.svg"
 [autoload]
 
 RigidBodyAutoScaler="*res://addons/rigidbody_auto_scaler/RigidBodyAutoScaler.gd"
+Globals="*res://autoload/globals.gd"
 
 [display]
 

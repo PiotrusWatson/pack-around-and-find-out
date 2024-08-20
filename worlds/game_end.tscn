@@ -62,3 +62,5 @@ offset_top = 440.0
 offset_right = 444.0
 offset_bottom = 574.0
 text = "Play again?"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

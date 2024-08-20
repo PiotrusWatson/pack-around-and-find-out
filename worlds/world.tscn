@@ -53,6 +53,7 @@ theme = ExtResource("5_wloaj")
 text = "MAX: 40 kg"
 
 [node name="DebugAmount" type="Label" parent="UI"]
+visible = false
 offset_left = 522.0
 offset_top = 36.0
 offset_right = 688.0
@@ -82,7 +83,7 @@ script = ExtResource("8_2yysi")
 max_weight_limit = Vector2(10, 60)
 
 [node name="GameTimer" type="Timer" parent="God"]
-wait_time = 60.0
+wait_time = 10.0
 one_shot = true
 autostart = true
 
@@ -150,4 +151,5 @@ physics_material_override = SubResource("PhysicsMaterial_rpnwv")
 transform = Transform3D(40, 0, 0, 0, -1.74846e-06, -40, 0, 40, -1.74846e-06, 0, -18.5755, 0)
 texture = ExtResource("21_kb0bw")
 
+[connection signal="timeout" from="God/GameTimer" to="God" method="_on_game_timer_timeout"]
 [connection signal="timeout" from="God/GameTick" to="God" method="_on_game_tick_timeout"]

@@ -11,7 +11,7 @@ func hold(thing):
 	thing.reparent(self)
 	
 func release(thing):
-	thing.reparent(get_tree().root)
+	thing.reparent(get_tree().current_scene)
 
 func get_thing():
 	if !holding_something():

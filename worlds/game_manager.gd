@@ -31,8 +31,14 @@ func increment_current_weight(weight):
 	current_weight_changed.emit(current_weight)
 	
 func end_game():
-	pass
+	Globals.max_weight = max_weight
+	Globals.current_filled_weight = current_weight
+	Globals.go_to_end()
 
 
 func _on_game_tick_timeout():
 	timer_ticked.emit(int(game_timer.time_left))
+
+
+func _on_game_timer_timeout():
+	end_game()
