@@ -1,25 +1,32 @@
-[gd_scene load_steps=10 format=3 uid="uid://yh6803te8yol"]
+[gd_scene load_steps=21 format=3 uid="uid://yh6803te8yol"]
 
-[ext_resource type="PackedScene" uid="uid://b3on6rws22ivw" path="res://prefabs/thing.tscn" id="1_lqrtc"]
 [ext_resource type="Script" path="res://worlds/signals.gd" id="1_tph61"]
 [ext_resource type="PackedScene" uid="uid://bcmrxjfk3auix" path="res://prefabs/floor.tscn" id="2_4hm4b"]
 [ext_resource type="PackedScene" uid="uid://dxxuhikvo4i2d" path="res://prefabs/cursor.tscn" id="3_0f7o8"]
-[ext_resource type="Resource" uid="uid://2bvjp5jgin4s" path="res://resources/things/bowl.tres" id="3_ukot3"]
 [ext_resource type="PackedScene" uid="uid://c08e8dpk3jpvo" path="res://prefabs/basket.tscn" id="4_s143n"]
 [ext_resource type="Script" path="res://prefabs/ui_manager.gd" id="5_g0sa4"]
 [ext_resource type="Theme" uid="uid://be013ll8enjqx" path="res://ui_stuff/ui_text.tres" id="5_wloaj"]
 [ext_resource type="Script" path="res://worlds/game_manager.gd" id="8_2yysi"]
+[ext_resource type="PackedScene" uid="uid://bsvudaf8sof5k" path="res://prefabs/things/8_ball.tscn" id="8_8paxx"]
+[ext_resource type="PackedScene" uid="uid://u6nf3aku5nwh" path="res://prefabs/things/banana.tscn" id="9_axu16"]
+[ext_resource type="PackedScene" uid="uid://dnlk7dfwfr747" path="res://prefabs/things/book.tscn" id="10_2nnug"]
+[ext_resource type="PackedScene" uid="uid://d1kc72xgsmuqc" path="res://prefabs/things/cactus.tscn" id="11_itvvx"]
+[ext_resource type="PackedScene" uid="uid://cliewg3mv57s7" path="res://prefabs/things/camera.tscn" id="12_eksjt"]
+[ext_resource type="PackedScene" uid="uid://d2bw0euht678t" path="res://prefabs/things/duck.tscn" id="13_6sfge"]
+[ext_resource type="PackedScene" uid="uid://dyadrvg5eu4v0" path="res://prefabs/things/fishbowl.tscn" id="14_0dyyb"]
+[ext_resource type="PackedScene" uid="uid://3s33g6vxqmsg" path="res://prefabs/things/frame.tscn" id="15_68pjv"]
+[ext_resource type="PackedScene" uid="uid://dnhb2mu1wonno" path="res://prefabs/things/morning_star.tscn" id="16_pqs6s"]
+[ext_resource type="PackedScene" uid="uid://clq441w0lhv67" path="res://prefabs/things/shoes.tscn" id="17_m8cxn"]
+[ext_resource type="PackedScene" uid="uid://wjfbdaci3py6" path="res://prefabs/things/tnt.tscn" id="18_1xvi5"]
+[ext_resource type="PackedScene" uid="uid://cqwcjyqji0d57" path="res://prefabs/things/tungsten_cube.tscn" id="19_7f8ut"]
+[ext_resource type="PackedScene" uid="uid://b6rrf8ug1hadl" path="res://prefabs/things/vase.tscn" id="20_b6ctr"]
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_tph61")
 
-[node name="Thing" parent="." instance=ExtResource("1_lqrtc")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 173.833, 28.8045, 0)
-weight_data = ExtResource("3_ukot3")
-
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 163.18, 1.34423)
-fov = 125.0
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 239.278, 1.34423)
+fov = 110.0
 size = 200.0
 near = 0.03
 far = 5000.0
@@ -27,6 +34,7 @@ far = 5000.0
 [node name="Floor" parent="." instance=ExtResource("2_4hm4b")]
 
 [node name="Cursor" parent="." instance=ExtResource("3_0f7o8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 188.745, 0)
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("5_g0sa4")
@@ -61,3 +69,56 @@ max_weight_limit = Vector2(10, 60)
 
 [node name="Basket" parent="." instance=ExtResource("4_s143n")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -196.455, 0.0832968, -72.2466)
+
+[node name="Items" type="Node" parent="."]
+
+[node name="8Ball" parent="." instance=ExtResource("8_8paxx")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 136.513, 100, 0)
+
+[node name="Banana" parent="." instance=ExtResource("9_axu16")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.9344, 100, 0)
+lock_rotation = true
+
+[node name="Book" parent="." instance=ExtResource("10_2nnug")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 104.019, 100, 76.491)
+lock_rotation = true
+
+[node name="Cactus" parent="." instance=ExtResource("11_itvvx")]
+transform = Transform3D(9, 0, 0, 0, 9, 0, 0, 0, 9, 283.799, 100, 0)
+lock_rotation = true
+
+[node name="Camera" parent="." instance=ExtResource("12_eksjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 301.269, 100, -167.757)
+lock_rotation = true
+
+[node name="Duck" parent="." instance=ExtResource("13_6sfge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 236.047, 100, 0)
+lock_rotation = true
+
+[node name="Fishbowl" parent="." instance=ExtResource("14_0dyyb")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 173.93, 176.607, -139.8)
+lock_rotation = true
+
+[node name="Frame" parent="." instance=ExtResource("15_68pjv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 258.421, 100, 0)
+lock_rotation = true
+
+[node name="MorningStar" parent="." instance=ExtResource("16_pqs6s")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 209.43, 100, 0)
+lock_rotation = true
+
+[node name="Shoes" parent="." instance=ExtResource("17_m8cxn")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 282.731, 100, -90.4358)
+lock_rotation = true
+
+[node name="TNT" parent="." instance=ExtResource("18_1xvi5")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 185.869, 100, 42.3714)
+lock_rotation = true
+
+[node name="TungstenCube" parent="." instance=ExtResource("19_7f8ut")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 289.078, 100, -217.806)
+lock_rotation = true
+
+[node name="Vase" parent="." instance=ExtResource("20_b6ctr")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 63.9251, 100, 0)
+lock_rotation = true

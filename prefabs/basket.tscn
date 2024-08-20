@@ -4,20 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://cce1771dbugia" path="res://sprites/BAG.png" id="2_cdbwg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_w85yf"]
-friction = 0.18
+friction = 0.06
 bounce = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tawhv"]
 size = Vector3(123.81, 0.16481, 111.96)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_37mxm"]
-size = Vector3(91.2415, 5.30457, 103.155)
+size = Vector3(91.2415, 23.3105, 103.155)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b62hd"]
-size = Vector3(7.16644, 4.73743, 108.413)
+size = Vector3(7.16644, 30.7321, 108.413)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ji8dj"]
-size = Vector3(103.192, 4.90002, 4.78369)
+size = Vector3(103.192, 25.7381, 4.78369)
 
 [node name="Basket" type="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0832968, 0)
@@ -36,23 +36,23 @@ texture = ExtResource("2_cdbwg")
 [node name="ThingDetector" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ThingDetector"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.50207, 2.15228, -4.49775)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.50207, 11.1553, -4.49775)
 shape = SubResource("BoxShape3D_37mxm")
 
 [node name="LeftWall" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.9586, 2.52405, -2.99034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.9586, 11.6067, -2.99034)
 shape = SubResource("BoxShape3D_b62hd")
 
 [node name="RightWall" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6085, 2.52405, -1.67956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6085, 9.58014, -1.67956)
 shape = SubResource("BoxShape3D_b62hd")
 
 [node name="FrontWall" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0288773, 2.59911, 47.7513)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0288773, 13.0181, 47.7513)
 shape = SubResource("BoxShape3D_ji8dj")
 
 [node name="BackWall" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.981, 2.59911, -56.1976)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.981, 13.6091, -56.1976)
 shape = SubResource("BoxShape3D_ji8dj")
 
 [connection signal="body_entered" from="ThingDetector" to="." method="_on_thing_detector_body_entered"]

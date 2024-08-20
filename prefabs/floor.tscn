@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://d0qa6wcj3o8rh" path="res://sprites/BACK.png" id="1_jirn7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vtevo"]
-size = Vector3(1034.53, 0.001, 1394.09)
+size = Vector3(3219.47, 0.001, 2085.28)
 
 [node name="Floor" type="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57239, -1.999, 5.4444)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.3893, -1.999, -340.149)
 shape = SubResource("BoxShape3D_vtevo")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
