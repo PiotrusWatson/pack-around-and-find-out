@@ -3,6 +3,8 @@ extends Node
 signal generated_max_weight(weight)
 signal current_weight_changed(weight)
 
+signal timer_ticked(time_left)
+
 @export var max_weight_limit: Vector2
 var max_weight
 var current_weight = 0
