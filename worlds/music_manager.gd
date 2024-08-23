@@ -7,6 +7,8 @@ extends Node
 @onready var game_player = $GamePlayer
 
 func play_menu():
+	if menu_player.playing:
+		return
 	if game_player.playing:
 		game_player.stop()
 	menu_player.stream = menu_song
