@@ -1,7 +1,9 @@
 extends Control
 
-
-
+func _ready():
+	print(MusicManager.is_node_ready())
+	MusicManager.play_menu()
+	
 func _on_start_button_down():
 	Globals.go_to_main()
 

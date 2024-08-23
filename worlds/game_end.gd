@@ -26,6 +26,8 @@ func _ready():
 	else:
 		score_label.text = "Oops. You went over and now you're being detained in airport jail :("
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	
+	MusicManager.play_menu()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

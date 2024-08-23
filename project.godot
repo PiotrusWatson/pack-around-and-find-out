@@ -19,6 +19,7 @@ config/icon="res://sprites/placeholder/icon.svg"
 
 RigidBodyAutoScaler="*res://addons/rigidbody_auto_scaler/RigidBodyAutoScaler.gd"
 Globals="*res://autoload/globals.gd"
+MusicManager="*res://components/music_manager.tscn"
 
 [display]
 
